@@ -9,7 +9,7 @@ def gc = new com.packages.GlobalClass()
 
  }
  stage('Class') {
-   echo 'Library Class Implement'
+  echo 'Library Class Implement'
   println GlobalClass.foo
-  gc.function1 'Demo Test'
+  gc.function1('DemoTest')
  }
