@@ -1,12 +1,7 @@
-@Library('pipeline-library-demo') _
+#!/usr/bin/env groovy
+@Library('pipeline-library-demo')_
 
-pipeline {
-    agent none
-    stages {
-        stage('Demo') {
-        echo 'Hello world'
-        sayHello 'Dave'
-        }
-
-        }  
-    }
+ stage('Demo') {
+     echo 'Hello world'
+     sayHello 'Dave'
+ }
