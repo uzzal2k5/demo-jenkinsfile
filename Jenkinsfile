@@ -16,5 +16,8 @@ def gc = new GlobalClass2()
 
 stage('Multi Funtion') {
   echo 'Multifunction Library Implement'
-  gc.function1('DemoTest')
+  gc.function1('function1')
+  gc.function2('function2')
+  gc.function3('function3')
+
  }
