@@ -1,7 +1,8 @@
 #!/usr/bin/env groovy
 @Library('pipeline-library-demo')
-import com.packages.GlobalClass
-import com.packages.GlobalClass2
+import com.packages.*
+//import com.packages.GlobalClass
+//import com.packages.GlobalClass2
 def gc = new GlobalClass2()
  stage('Function') {
      echo 'Hello world'
