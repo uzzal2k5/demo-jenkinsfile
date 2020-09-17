@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 @Library('pipeline-library-demo')
 import com.packages.GlobalClass
-def gc = new GlobalClass(this)
+def gc = new GlobalClass()
 
  stage('Function') {
      echo 'Hello world'
