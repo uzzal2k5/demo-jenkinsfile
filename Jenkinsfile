@@ -2,8 +2,9 @@
 @Library('pipeline-library-demo')
 import com.packages.*
 //import com.packages.GlobalClass
-//import com.packages.GlobalClass2
-def gc = new GlobalClass2()
+//import com.packages.MultiFunction
+def gc = new MultiFunction()
+ 
  stage('Function') {
      echo 'Hello world'
      sayHello 'uzzal'
