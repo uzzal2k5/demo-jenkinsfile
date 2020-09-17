@@ -1,14 +1,15 @@
 #!/usr/bin/env groovy
 @Library('pipeline-library-demo')
 import com.packages.GlobalClass
+def gc = new com.packages.GlobalClass()
 
- stage('Demo') {
+ stage('Function') {
      echo 'Hello world'
      sayHello 'uzzal'
 
  }
- stage('Demo') {
+ stage('Class') {
    echo 'Library Class Implement'
   println GlobalClass.foo
-  sayHello.function1 'Demo Test'
+  gc.function1 'Demo Test'
  }
