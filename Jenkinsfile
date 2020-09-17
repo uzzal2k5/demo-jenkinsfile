@@ -11,5 +11,5 @@ def gc = new GlobalClass()
  stage('Class') {
   echo 'Library Class Implement'
   println GlobalClass.foo
-  gc.function1('DemoTest')
+  gc.function1 'DemoTest'
  }
