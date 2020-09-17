@@ -10,5 +10,5 @@ import com.packages.GlobalClass
  stage('Demo') {
    echo 'Library Class Implement'
   println GlobalClass.foo
-  sayHello 'Demo Test'
+  sayHello.function1 'Demo Test'
  }
