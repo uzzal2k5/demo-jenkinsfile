@@ -3,6 +3,8 @@
 import com.packages.*
 //import com.packages.GlobalClass
 //import com.packages.MultiFunction
+
+def gclass = new GlobalClass()
 def gc = new MultiFunction()
  
  stage('Function') {
@@ -21,5 +23,11 @@ stage('Multi Funtion') {
   gc.function1('function1')
   gc.function2('function2')
   gc.function3('function3')
+
+ }
+ stage('Global Class Funtion') {
+  echo 'Global CLass Library Implement'
+  gclass.function1('Global CLass function1')
+  
 
  }
