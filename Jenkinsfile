@@ -26,8 +26,13 @@ stage('Multi Funtion') {
 
  }
  stage('Global Class Funtion') {
-  echo 'Global CLass Library Implement'
-  gclass.function1('Global CLass function1')
+   timestamps{
+     logstash{
+        echo 'Global CLass Library Implement'
+        gclass.function1('Global CLass function1')
+  
+     }
+   }
   
 
  }
