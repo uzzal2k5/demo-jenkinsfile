@@ -2,7 +2,7 @@
 @Library('pipeline-library-demo')
 import com.packages.*
 import org.yaml.snakeyaml.*
-import groovy.yaml.YamlSlurper
+import groovy.yaml.YamlSlurper.*
 //Yaml parser = new Yaml()
 //import com.packages.GlobalClass
 //import com.packages.MultiFunction
