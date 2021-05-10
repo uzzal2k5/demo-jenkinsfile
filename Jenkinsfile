@@ -3,7 +3,6 @@
 import com.packages.*
 //import com.packages.GlobalClass
 //import com.packages.MultiFunction
-
 def gclass = new GlobalClass()
 def gc = new MultiFunction()
  
@@ -25,6 +24,12 @@ stage('Multi Funtion') {
   gc.function3('function3')
 
  }
+stage('Read YAML File'){
+    def yamlData =readYaml file: 'config.yaml'
+    def param_name = yamlData.parameter_new[0].name
+    echo "${param_name}";
+    echo param_name;
+}
  stage('Global Class Funtion') {
    timestamps{
      logstash{
