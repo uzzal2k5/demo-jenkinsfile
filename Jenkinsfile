@@ -1,6 +1,7 @@
 #!/usr/bin/env groovy
 @Library('pipeline-library-demo')
 import com.packages.*
+import groovy.json.JsonSlurperClassic
 //@Grab('org.yaml:snakeyaml:1.17')
 //import org.yaml.snakeyaml.Yaml
 //import org.yaml.snakeyaml.DumperOptions
@@ -30,11 +31,12 @@ stage('Multi Funtion') {
 
  }
 stage("Parse JSON ") {
-    def slurper = new groovy.json.JsonSlurperClassic()
-    def jobject =  slurper.parse('config.json')
+//    def projects = readJSON file: "${env.WORKSPACE}\\Projects.json"
+//    def  slurper = new JsonSlurperClassic()
+//    def jobject =  slurper.parse('config.json')
 
-//    def jobj = readJSON file: 'config.json'
-   assert jobject.parameter_new[0].name
+    def jobj = readJSON file: 'config.json'
+   assert jobj.parameter_new[0].name
 
 }
 
