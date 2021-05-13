@@ -34,10 +34,11 @@ stage("Parse JSON ") {
 //    def projects = readJSON file: "${env.WORKSPACE}\\Projects.json"
 //    def  slurper = new JsonSlurperClassic()
 //    def jobject =  slurper.parse('config.json')
-    def data = readFile(file: '${env.WORKSPACE}/config.json')
-    println(data)
-    def jsonObj = readJSON text: data
-   assert jsonObj.parameter_new[0].name
+    def restResponse = readFile(file: '${env.WORKSPACE}/config.json')
+    println(restResponse)
+    def data = new JsonSlurper().parseText( restResponse )
+//    def jsonObj = readJSON text: data
+   print(data.parameter_new[0].name)
 
 }
 
