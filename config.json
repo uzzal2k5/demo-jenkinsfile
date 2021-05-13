@@ -1,0 +1,26 @@
+{
+  "parameter_new": [
+    {
+      "name": "parameter_name_1",
+      "Type": "String",
+      "DefaultValues": "Parameter name 1"
+    },
+    {
+      "name": "parameter_name_2",
+      "Type": "String",
+      "DefaultValues": "Parameter name 2"
+    }
+  ],
+  "parameter_old": [
+    {
+      "name": "parameter_name_old_1",
+      "Type": "String",
+      "DefaultValues": "Parameter name  Old1"
+    },
+    {
+      "name": "parameter_name_old_2",
+      "Type": "String",
+      "DefaultValues": "Parameter name Old 2"
+    }
+  ]
+}

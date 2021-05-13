@@ -29,14 +29,24 @@ stage('Multi Funtion') {
   gc.function3('function3')
 
  }
+stage("Parse JSON ") {
+    def slurper = new groovy.json.JsonSlurperClassic()
+    def jobject =  slurper.parse('config.json')
+
+//    def jobj = readJSON file: 'config.json'
+   assert jobject.parameter_new[0].name
+
+}
+
 stage('Read YAML File'){
-    def val = this.context.readYaml file: "config.yaml"
-    this.parameter_new = val.parameter_new
-    print(this.parameter_new)
-//    def yamlData =readYaml file: 'config.yaml'
-//    def param_name = yamlData.parameter_new[0].name
-//    echo "${param_name}";
+//    def val = this.context.readYaml file: "config.yaml"
+//    this.parameter_new = val.parameter_new
+//    print(this.parameter_new)
+    def yamlData = readYaml file: 'config.yaml'
+    def param_name = yamlData.parameter_new[0].name
+    echo "${param_name}";
 //    echo param_name;
+    def ano_val = ${param_name}
 
 
 }
