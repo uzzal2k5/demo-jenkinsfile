@@ -36,8 +36,8 @@ stage("Parse JSON ") {
 //    def jobject =  slurper.parse('config.json')
     def restResponse = readFile(file: '${env.WORKSPACE}/config.json')
     println(restResponse)
-    def data = new JsonSlurper().parseText( restResponse )
-//    def jsonObj = readJSON text: data
+//    def data = new JsonSlurper().parseText( restResponse )
+    def data = readJSON text: restResponse
    print(data.parameter_new[0].name)
 
 }
