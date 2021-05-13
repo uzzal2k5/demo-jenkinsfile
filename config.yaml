@@ -14,3 +14,8 @@ parameter_old:
   - name: parameter_name_old_2
     Type: String
     DefaultValues: "Parameter name Old 2"
+
+
+os: Linux
+files:
+  - source: /

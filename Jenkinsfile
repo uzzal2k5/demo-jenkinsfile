@@ -1,10 +1,10 @@
 #!/usr/bin/env groovy
 @Library('pipeline-library-demo')
 import com.packages.*
-@Grab('org.yaml:snakeyaml:1.17')
-import org.yaml.snakeyaml.Yaml
-import org.yaml.snakeyaml.DumperOptions
-import static org.yaml.snakeyaml.DumperOptions.FlowStyle.BLOCK
+//@Grab('org.yaml:snakeyaml:1.17')
+//import org.yaml.snakeyaml.Yaml
+//import org.yaml.snakeyaml.DumperOptions
+//import static org.yaml.snakeyaml.DumperOptions.FlowStyle.BLOCK
 
 //import com.packages.GlobalClass
 //import com.packages.MultiFunction
@@ -30,8 +30,14 @@ stage('Multi Funtion') {
 
  }
 stage('Read YAML File'){
-    def yaml = readYaml file: "config.yaml"
-    echo yaml.parameter_new.name
+    def val = this.context.readYaml file: "config.yaml"
+    this.parameter_new = val.parameter_new
+    print(this.parameter_new)
+//    def yamlData =readYaml file: 'config.yaml'
+//    def param_name = yamlData.parameter_new[0].name
+//    echo "${param_name}";
+//    echo param_name;
+
 
 }
  stage('Global Class Funtion') {
