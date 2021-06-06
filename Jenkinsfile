@@ -12,6 +12,8 @@ import groovy.json.JsonSlurperClassic
 def gclass = new GlobalClass()
 def gc = new MultiFunction()
 node { 
+ stage('Checkout'){
+ checkout([$class: 'GitSCM', branches: [[name: '*/read_from_yaml']], extensions: [], userRemoteConfigs: [[credentialsId: 'uzzal_sshkey_security_server', url: 'https://github.com/uzzal2k5/demo-jenkinsfile.git']]])}
  stage('Function') {
      echo 'Hello world'
      sayHello 'uzzal'
