@@ -40,7 +40,7 @@ stage("Parse JSON ") {
     println(restResponse)
 //    def data = new JsonSlurper().parseText( restResponse )
     def data = readJSON text: restResponse
-   print(data.Parameters[0])
+   print(data.Parameters)
 
 }
 // stage('Read YAML file 1') {
@@ -52,7 +52,7 @@ stage('Read YAML File'){
 //    this.parameter_new = val.parameter_new
 //    print(this.parameter_new)
     def yamlData = readYaml file: "config.yaml"
-    def param = yamlData.Parameters[0]
+    def param = yamlData.Parameters
     echo "${param}"
 //     def name = param[0].name
 //     echo "${param_name}";
