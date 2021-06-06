@@ -42,11 +42,8 @@ stage('Multi Funtion') {
 
 // }
 stage('Read YAML file 1') {
-        steps {
-            script{ datas = readYaml (file: 'config.yaml') }
-            echo datas.ear_file.deploy.toString()
-
-        }
+    script{ datas = readYaml (file: 'config.yaml') }
+    echo datas.ear_file.deploy.toString()
     }
 stage('Read YAML File'){
 //    def val = this.context.readYaml file: "config.yaml"
