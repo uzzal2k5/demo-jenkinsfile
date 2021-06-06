@@ -11,7 +11,7 @@ import groovy.json.JsonSlurperClassic
 //import com.packages.MultiFunction
 def gclass = new GlobalClass()
 def gc = new MultiFunction()
- 
+node { 
  stage('Function') {
      echo 'Hello world'
      sayHello 'uzzal'
@@ -69,4 +69,4 @@ stage('Read YAML File'){
 
  }
 
-
+}
