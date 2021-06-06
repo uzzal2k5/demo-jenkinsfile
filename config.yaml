@@ -1,43 +1,13 @@
-YAML Lint
-Paste in your YAML and click "Go" - we'll tell you if it's valid or not, and give you a nice clean UTF-8 version of it. Optimized for Ruby.
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
----
 Parameters:
   parameter1_repo1:
-    -
+    - name: gitlab_target_name
       DefaultValues: ssdtestpipeline
       Type: String
-      name: gitlab_target_name
-    -
+      
+    - name: parameter_name_1
       DefaultValues: parameter_name_1
       Type: String
-      name: parameter_name_1
+      
   parameter2_repo2:
     -
       DefaultValues: ssdtestpipeline2
