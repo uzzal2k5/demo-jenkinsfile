@@ -52,7 +52,7 @@ stage('Read YAML File'){
 //    this.parameter_new = val.parameter_new
 //    print(this.parameter_new)
     def yamlData = readYaml file: "config.yaml"
-    def param_name = yamlData.Parameter[0]
+    def param_name = yamlData.Parameters.parameter1_repo1[0].name
     echo "${param_name}";
 //    echo param_name;
 //    def ano_val = ${param_name}
