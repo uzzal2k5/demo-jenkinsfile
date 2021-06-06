@@ -52,23 +52,13 @@ stage('Read YAML File'){
 //    this.parameter_new = val.parameter_new
 //    print(this.parameter_new)
     def yamlData = readYaml file: "config.yaml"
-    def param_name = yamlData.Parameters.parameter1_repo1[0].name
+    def param = yamlData.Parameters[0]
+    def name = param[0].name
     echo "${param_name}";
 //    echo param_name;
 //    def ano_val = ${param_name}
 
 
 }
- stage('Global Class Funtion') {
-   timestamps{
-     logstash{
-        echo 'Global CLass Library Implement'
-        gclass.function1('Global CLass function1')
-  
-     }
-   }
-  
-
- }
-
+ 
 }
