@@ -42,14 +42,14 @@ stage('Multi Funtion') {
 
 // }
 stage('Read YAML file 1') {
-    script{ datas = readYaml (file: 'config.yaml') }
+    script{ datas = readYAML (file: 'config.yaml') }
     echo datas.ear_file.deploy.toString()
     }
 stage('Read YAML File'){
 //    def val = this.context.readYaml file: "config.yaml"
 //    this.parameter_new = val.parameter_new
 //    print(this.parameter_new)
-    def yamlData = readYaml file: 'config.yaml'
+    def yamlData = readYAML file: 'config.yaml'
     def param_name = yamlData.parameter_old[0].name
     echo "${param_name}";
 //    echo param_name;
