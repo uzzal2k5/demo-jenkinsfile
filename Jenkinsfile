@@ -32,17 +32,17 @@ stage('Multi Funtion') {
   gc.function3('function3')
 
  }
-// stage("Parse JSON ") {
-// //    def projects = readJSON file: "${env.WORKSPACE}\\Projects.json"
-// //    def  slurper = new JsonSlurperClassic()
-// //    def jobject =  slurper.parse('config.json')
-//     def restResponse = readFile(file: 'config.json')
-//     println(restResponse)
-// //    def data = new JsonSlurper().parseText( restResponse )
-//     def data = readJSON text: restResponse
-//    print(data.parameter_new[0].name)
+stage("Parse JSON ") {
+//    def projects = readJSON file: "${env.WORKSPACE}\\Projects.json"
+//    def  slurper = new JsonSlurperClassic()
+//    def jobject =  slurper.parse('config.json')
+    def restResponse = readFile(file: 'config.json')
+    println(restResponse)
+//    def data = new JsonSlurper().parseText( restResponse )
+    def data = readJSON text: restResponse
+   print(data.Parameters[0])
 
-// }
+}
 // stage('Read YAML file 1') {
 //     script{ datas = readYaml (file: "${env.WORKSPACE}/config.yaml") }
 //     echo datas.Parameters[0].toString()
@@ -53,8 +53,9 @@ stage('Read YAML File'){
 //    print(this.parameter_new)
     def yamlData = readYaml file: "config.yaml"
     def param = yamlData.Parameters[0]
-    def name = param[0].name
-    echo "${param_name}";
+    echo "${param}"
+//     def name = param[0].name
+//     echo "${param_name}";
 //    echo param_name;
 //    def ano_val = ${param_name}
 
