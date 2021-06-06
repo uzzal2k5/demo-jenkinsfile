@@ -1,26 +1,34 @@
 {
-  "parameter_new": [
+  "Parameters": {
+    "parameter1_repo1": [
+      {
+        "name": "gitlab_target_name",
+        "Type": "String",
+        "DefaultValues": "ssdtestpipeline"
+      },
+      {
+        "name": "parameter_name_1",
+        "Type": "String",
+        "DefaultValues": "parameter_name_1"
+      }
+    ],
+    "parameter2_repo2": [
+      {
+        "name": "gitlab_target_name",
+        "Type": "String",
+        "DefaultValues": "ssdtestpipeline2"
+      },
+      {
+        "name": "parameter_name_2",
+        "Type": "String",
+        "DefaultValues": "Parameter name 2"
+      }
+    ]
+  },
+  "os": "Linux",
+  "files": [
     {
-      "name": "parameter_name_1",
-      "Type": "String",
-      "DefaultValues": "Parameter name 1"
-    },
-    {
-      "name": "parameter_name_2",
-      "Type": "String",
-      "DefaultValues": "Parameter name 2"
-    }
-  ],
-  "parameter_old": [
-    {
-      "name": "parameter_name_old_1",
-      "Type": "String",
-      "DefaultValues": "Parameter name  Old1"
-    },
-    {
-      "name": "parameter_name_old_2",
-      "Type": "String",
-      "DefaultValues": "Parameter name Old 2"
+      "source": "/"
     }
   ]
 }

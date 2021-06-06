@@ -47,10 +47,10 @@ stage('Read YAML File'){
 //    this.parameter_new = val.parameter_new
 //    print(this.parameter_new)
     def yamlData = readYaml file: 'config.yaml'
-    def param_name = yamlData.parameter_new[0].name
+    def param_name = yamlData.parameter_old[0].name
     echo "${param_name}";
 //    echo param_name;
-    def ano_val = ${param_name}
+//    def ano_val = ${param_name}
 
 
 }
@@ -65,3 +65,5 @@ stage('Read YAML File'){
   
 
  }
+
+
