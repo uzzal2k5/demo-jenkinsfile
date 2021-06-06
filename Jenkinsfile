@@ -30,17 +30,17 @@ stage('Multi Funtion') {
   gc.function3('function3')
 
  }
-stage("Parse JSON ") {
-//    def projects = readJSON file: "${env.WORKSPACE}\\Projects.json"
-//    def  slurper = new JsonSlurperClassic()
-//    def jobject =  slurper.parse('config.json')
-    def restResponse = readFile(file: 'config.json')
-    println(restResponse)
-//    def data = new JsonSlurper().parseText( restResponse )
-    def data = readJSON text: restResponse
-   print(data.parameter_new[0].name)
+// stage("Parse JSON ") {
+// //    def projects = readJSON file: "${env.WORKSPACE}\\Projects.json"
+// //    def  slurper = new JsonSlurperClassic()
+// //    def jobject =  slurper.parse('config.json')
+//     def restResponse = readFile(file: 'config.json')
+//     println(restResponse)
+// //    def data = new JsonSlurper().parseText( restResponse )
+//     def data = readJSON text: restResponse
+//    print(data.parameter_new[0].name)
 
-}
+// }
 
 stage('Read YAML File'){
 //    def val = this.context.readYaml file: "config.yaml"
