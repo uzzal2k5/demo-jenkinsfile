@@ -42,7 +42,7 @@ stage('Multi Funtion') {
 
 // }
 stage('Read YAML file 1') {
-    script{ datas = readYaml (file: 'config.yaml') }
+    script{ datas = readYaml (file: "${env.WORKSPACE}/config.yaml") }
     echo datas.ear_file.deploy.toString()
     }
 stage('Read YAML File'){
