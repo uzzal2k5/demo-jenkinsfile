@@ -57,7 +57,7 @@ stage('Read YAML File'){
     println(repos)
  def repository = repos.toArray()
 //     Object repository = jsonSlurper.parseText(repos)
-    println(repository[0])
+    println(repository[0].toString())
 //   
     
 //     def name = repos[0].name
