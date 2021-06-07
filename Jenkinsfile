@@ -54,6 +54,7 @@ stage('Read YAML File'){
     def data = readYaml file: "config.yaml"
     println(data)
     def repos = data.Parameters[0]
+ println(repos)
     println(repos[0])
 //   
     
