@@ -53,12 +53,9 @@ stage('Read YAML File'){
 //    print(this.parameter_new)
     def data = readYaml file: "config.yaml"
     println(data)
-    def repos = data.Parameters
+    def repos = data.Parameters[0]
     def name = repos[0].name
-    echo "${param_name}";
-   echo param_name;
-   def ano_val = ${param_name}
-
+    echo "${name}";
 
 }
  
