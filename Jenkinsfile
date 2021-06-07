@@ -55,8 +55,7 @@ stage('Read YAML File'){
     println(data)
     def repos = data.Parameters[0]
     println(repos)
-   String[] array = new String[] repos;
-   System.out.println(Arrays.toString(array));
+//   
     
 //     def name = repos[0].name
 //     echo "${name}";
