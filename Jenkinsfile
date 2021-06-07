@@ -55,7 +55,8 @@ stage('Read YAML File'){
     println(data)
     def repos = data.Parameters[0]
     println(repos)
-    println(repos[0])
+    def myrepo = repos[key][0].name
+    println(repos[0][key])
 //     def name = repos[0].name
 //     echo "${name}";
 
