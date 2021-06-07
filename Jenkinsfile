@@ -1,6 +1,7 @@
 #!/usr/bin/env groovy
 @Library('pipeline-library-demo')
 import com.packages.*
+import groovy.json.JsonSlurper
 import groovy.json.JsonSlurperClassic
 //@Grab('org.yaml:snakeyaml:1.17')
 //import org.yaml.snakeyaml.Yaml
