@@ -41,7 +41,7 @@ stage("Parse JSON ") {
 //    def data = new JsonSlurper().parseText( restResponse )
     def data = readJSON text: restResponse
    print(data.Parameters)
- print(data.Parameters[0]['parameter1_repo1'])
+ print(data.Parameters[0])
 
 }
 // stage('Read YAML file 1') {
