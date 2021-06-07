@@ -38,10 +38,9 @@ stage("Parse JSON ") {
 //    def jobject =  slurper.parse('config.json')
     def restResponse = readFile(file: 'config.json')
     println(restResponse)
-//    def data = new JsonSlurper().parseText( restResponse )
     def data = readJSON text: restResponse
-   print(data.Parameters)
- print(data.Parameters.parameter1_repo1[0].name)
+    def repos = data.Parameters
+    print(repos.parameter1_repo1[0].name)
 
 }
 // stage('Read YAML file 1') {
@@ -52,14 +51,13 @@ stage('Read YAML File'){
 //    def val = this.context.readYaml file: "config.yaml"
 //    this.parameter_new = val.parameter_new
 //    print(this.parameter_new)
-    def yamlData = readYaml file: "config.yaml"
-    println(yamlData)
-    def param = yamlData.Parameters
-    echo "${param[0]}"
-//     def name = param[0].name
-//     echo "${param_name}";
-//    echo param_name;
-//    def ano_val = ${param_name}
+    def data = readYaml file: "config.yaml"
+    println(data)
+    def repos = data.Parameters
+    def name = repos[0].name
+    echo "${param_name}";
+   echo param_name;
+   def ano_val = ${param_name}
 
 
 }
