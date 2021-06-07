@@ -1,7 +1,7 @@
 --- 
 Parameters: 
   - 
-    repository: parameter1_repo1
+    parameter1_repo1: 
       - 
         DefaultValues: ssdtestpipeline
         Type: String
@@ -11,7 +11,7 @@ Parameters:
         Type: String
         name: parameter_name_1
   - 
-    repository: parameter2_repo2
+    parameter2_repo2: 
       - 
         DefaultValues: ssdtestpipeline2
         Type: String
