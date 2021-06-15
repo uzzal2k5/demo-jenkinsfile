@@ -72,10 +72,6 @@ stage('Read YAML File'){
 
         }
     }
-    
-//     def name = repos[0].name
-//     echo "${name}";
-
-}
+   
  
 }
