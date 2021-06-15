@@ -68,7 +68,7 @@ stage('Read YAML File'){
  if (data != null){
        def param = data.parameter.each{ def repo -> it.toString()}
         def repos = {def r -> r.each{param it}}
-        println repos[0]
+        println param
 
         }
     }
