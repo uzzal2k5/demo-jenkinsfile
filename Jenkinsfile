@@ -61,7 +61,7 @@ stage('Read YAML File'){
  if (data != null){
   data.parameter.each{
    String repository = it.toString()
-   String repoName = repository[@]
+   String repoName = repository['@']
    println(repoName)
   }
  }
