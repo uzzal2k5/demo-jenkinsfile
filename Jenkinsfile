@@ -57,6 +57,8 @@ stage('Read YAML File'){
     println(data.parameter)
  
     println(data.parameter.parameter1_repo1)
+    println(data.parameter.each{it.toString()})
+   
     
 //     def name = repos[0].name
 //     echo "${name}";
