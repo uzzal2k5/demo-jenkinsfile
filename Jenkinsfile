@@ -58,13 +58,20 @@ stage('Read YAML File'){
  
     println(data.parameter.parameter1_repo1)
     println(data.parameter.each{it.toString()})
+//  if (data != null){
+//   data.parameter.each{ 
+//    key, value -> repo = key
+//    println repo
+//    repo.each{ println( it)}
+//   }
+//  }
  if (data != null){
-  data.parameter.each{ 
-   key, value -> repo = key
-   println repo
-   repo.each{ println( it)}
-  }
- }
+       def param = data.parameter.each{ def repo -> it.toString()}
+        def repos = {def r -> r.each{param it}}
+        println repos
+
+        }
+    }
     
 //     def name = repos[0].name
 //     echo "${name}";
