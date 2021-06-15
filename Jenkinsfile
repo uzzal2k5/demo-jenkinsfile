@@ -62,6 +62,7 @@ stage('Read YAML File'){
   data.parameter.each{
    String repository = it.toString()
    String repoName = repository.parameter1_repo1
+   println(repoName)
   }
     
 //     def name = repos[0].name
