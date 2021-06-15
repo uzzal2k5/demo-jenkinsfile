@@ -56,10 +56,7 @@ stage('Read YAML File'){
     println(data)
     def repos = data.Parameters[0]
     println(repos)
-    def jsonSlurper = new JsonSlurper()
-    def repository = jsonSlurper.parseText(repos)
-    println(repository)
-    println(repository[0].name)
+
 //   
     
 //     def name = repos[0].name
