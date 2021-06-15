@@ -55,11 +55,15 @@ stage('Read YAML File'){
     def data = readYaml file: "config.yaml"
     println(data)
     def name = data.parameter1_repo1[0].name
- println(name)
-//     def values = data.parameter1_repo1[0].DefaultValues
-//  println(values)
+    println(name)
+    def values = data.parameter1_repo1[0].DefaultValues
+    println(values)
     
-
+     def name2 = data.parameter2_repo2[0].name
+    println(name2)
+    def values2 = data.parameter2_repo2[0].DefaultValues
+    println(values2)
+ 
 //   
     
 //     def name = repos[0].name
