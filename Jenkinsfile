@@ -61,7 +61,8 @@ stage('Read YAML File'){
  if (data != null){
   data.parameter.each{ 
    key, value -> repo = key
-  println repo
+   println repo
+   repo.each{ println( it)
   }
  }
     
