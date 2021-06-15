@@ -64,6 +64,7 @@ stage('Read YAML File'){
    String repoName = repository.parameter1_repo1
    println(repoName)
   }
+ }
     
 //     def name = repos[0].name
 //     echo "${name}";
