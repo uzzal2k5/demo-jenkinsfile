@@ -1,26 +1,19 @@
 --- 
-Parameters: 
+parameter1_repo1: 
   - 
-    parameter1_repo1: 
-      - 
-        DefaultValues: ssdtestpipeline
-        Type: String
-        name: gitlab_target_name
-      - 
-        DefaultValues: parameter_name_1
-        Type: String
-        name: parameter_name_1
+    DefaultValues: ssdtestpipeline
+    Type: String
+    name: gitlab_target_name
   - 
-    parameter2_repo2: 
-      - 
-        DefaultValues: ssdtestpipeline2
-        Type: String
-        name: gitlab_target_name
-      - 
-        DefaultValues: "Parameter name 2"
-        Type: String
-        name: parameter_name_2
-files: 
+    DefaultValues: parameter_name_1
+    Type: String
+    name: parameter_name_1
+parameter2_repo2: 
   - 
-    source: /
-os: Linux
+    DefaultValues: ssdtestpipeline2
+    Type: String
+    name: gitlab_target_name
+  - 
+    DefaultValues: "Parameter name 2"
+    Type: String
+    name: parameter_name_2
