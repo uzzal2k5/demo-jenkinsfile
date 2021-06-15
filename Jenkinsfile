@@ -69,7 +69,7 @@ stage('Read YAML File'){
        data.parameter.each{ 
             String repository = it.toString()
            for(repo in repository){
-               println( repo)
+               println( repo.key)
            }
        
         }
