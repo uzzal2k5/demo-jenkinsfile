@@ -54,7 +54,7 @@ stage('Read YAML File'){
 //    print(this.parameter_new)
     def data = readYaml file: "config.yaml"
     println(data)
-    println(data[0])
+    println(data.parameter)
  
 //   
     
