@@ -31,7 +31,7 @@ stage('Read YAML File'){
 //      "repo"+i +" = "+ name
 //      "branch"+i +" = "+ branch
 //      "url"+i +" = "+ url
-     print("Build Number [" + i + "] with " + "repo"+i +" = "+ name +" "+"branch"+i +" = "+ branch+" "+"url"+i +" = "+ url)
+     print(  "repo"+i +" = "+ name +", "+"branch"+i +" = "+ branch+","+"url"+i +" = "+ url)
     } 
   
 }
