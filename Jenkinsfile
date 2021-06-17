@@ -28,7 +28,7 @@ parallel {
       branch  = repo[i].branch
       url  = repo[i].url
       i = i+1
-     stage(println name) {
+      stage("Repo") {
                    
        print(  "repo"+i +" = "+ name +", "+"branch"+i +" = "+ branch+","+"url"+i +" = "+ url)
      }
