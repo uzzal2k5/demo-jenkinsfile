@@ -1,11 +1,18 @@
 --- 
 parameter: 
-  parameter1_repo1: 
+  repository: 
     - 
-      DefaultValues: ssdtestpipeline
-      Type: String
-      name: parameter1_repo1_gitlab_target_name1
+      name: Master_Repository
+      branch: master
+      user_id: master_id
+      url: Master_Repository_URL 
     - 
-      DefaultValues: parameter_name_2
-      Type: String
-      name: parameter1_repo1_gitlab_target_name2
+      name: Dev_Repository
+      branch: dev
+      user_id: dev_id
+      url: Dev_Repository_URL 
+    - 
+      name: Stage_Repository
+      branch: Stage
+      user_id: stage_id
+      url: Stage_Repository_URL 
