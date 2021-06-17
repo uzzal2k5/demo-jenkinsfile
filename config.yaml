@@ -9,12 +9,3 @@ parameter:
       DefaultValues: parameter_name_2
       Type: String
       name: parameter1_repo1_gitlab_target_name2
-  parameter2_repo2: 
-    - 
-      DefaultValues: ssdtestpipeline2
-      Type: String
-      name: parameter2_repo2_gitlab_target_name_1
-    - 
-      DefaultValues: "Parameter name 2"
-      Type: String
-      name: parameter2_repo2_gitlab_target_name_2
