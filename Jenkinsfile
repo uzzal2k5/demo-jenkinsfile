@@ -32,7 +32,8 @@ stage('Read YAML File'){
 //      "branch"+i +" = "+ branch
 //      "url"+i +" = "+ url
      print(  "repo"+i +" = "+ name +", "+"branch"+i +" = "+ branch+","+"url"+i +" = "+ url)
-    "repo"+i +" = "+ name +", "+"branch"+i +" = "+ branch+","+"url"+i +" = "+ url
+     assert "repo"+i  ==  name
+//         "repo"+i +" = "+ name +", "+"branch"+i +" = "+ branch+","+"url"+i +" = "+ url
      print repo0
     } 
   
