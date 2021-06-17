@@ -39,7 +39,8 @@ stage('Read YAML File'){
             i = i+1
 
         }  //while
-    parallel repobuild
+    println repobuild
+//     parallel repobuild
 }
  
  
