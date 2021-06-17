@@ -13,4 +13,3 @@ parameter:
       name: Stage_Repository
       branch: Stage
       url: Stage_Repository_URL 
-
