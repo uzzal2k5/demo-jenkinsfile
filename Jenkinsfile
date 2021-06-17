@@ -48,7 +48,7 @@ stage('Read YAML File'){
     for (STAGE_NAME in ["Branch_1", "Branch_2", "Branch_3"]) {
 
         // Define and add to stages dict/map of parallel branch stages
-        branchedStages["${STAGE_NAME}"] = {
+        branchedStages["${STAGE_NAME}"] += {
             stage("Parallel Branch Stage: ${STAGE_NAME}") {
                 // Parallel stage work here
                 sh "sleep 10"
