@@ -27,8 +27,8 @@ stage('Read YAML File'){
     println(data)
     println(data.parameter)
     println(data.parameter.repository)
-    println(data.parameter.parameter1_repo1[0].name)
-    println(data.parameter.parameter1_repo1[1].name)
+    println(data.parameter.repository[0].name)
+    println(data.parameter.repository[1].name)
     println(data.parameter.each{it.toString()})
 
  
