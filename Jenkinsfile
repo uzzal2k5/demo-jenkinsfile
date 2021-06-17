@@ -31,5 +31,11 @@ stage('Read YAML File'){
      print("Build Number [" + i + "] with " + "repo"+i +" = "+ name + "branch"+i +" = "+ branch+" url"+i +" = "+ url)
     } 
 }
+ stage('Parallel Build '){
+   println repo0
+   println repo1
+   println repo2
+  
+ }
  
 }
