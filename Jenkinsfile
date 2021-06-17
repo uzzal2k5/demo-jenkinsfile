@@ -24,28 +24,16 @@ node {
 stage('Read YAML File'){
 
     def data = readYaml file: "config.yaml"
-    println(data)
-//     println(data.parameter)
     def repo = data.parameter.repository
-//     println(data.parameter.repository[0].name)
-//     println(data.parameter.repository[1].name)
-//     println(data.parameter.each{it.toString()})
-//     println(data.parameter.repository.each{it.toString()})
-//     def repo = data.parameter.repository.each{it.toString()}
     println "Repository"
-    println repo
-    println repo.size()
     def i = 0
     while (i < repo.size()){
       name = repo[i].name
       branch = repo[i].branch
       url = repo[i].url
       i = i+1
-//      println "Build Repository Number :" i
      print("Build Number [" + i + "] with Repository: "+ name + " Branch: "+branch+" URL: "+ url)
     } 
-
- 
 }
  
 }
