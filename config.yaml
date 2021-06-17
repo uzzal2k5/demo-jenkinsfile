@@ -4,7 +4,7 @@ parameter:
     - 
       name: Master_Repository
       branch: master
-      url: Master_Repository_URL 
+      url: Master_Repository_URL
     - 
       name: Dev_Repository
       branch: dev
@@ -13,3 +13,4 @@ parameter:
       name: Stage_Repository
       branch: Stage
       url: Stage_Repository_URL 
+
