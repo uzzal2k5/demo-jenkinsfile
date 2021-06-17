@@ -27,8 +27,7 @@ stage('Read YAML File'){
             name = repo[i].name
             branch  = repo[i].branch
             url  = repo[i].url
-//             repobuild["$i"] = {
-           parallel {
+            repobuild["$i"] = {
               stage("${name+i}") {
                 print("repo" + i + " = " + name + ", " + "branch" + i + " = " + branch + "," + "url" + i + " = " + url)
                 sleep 10     
@@ -37,8 +36,28 @@ stage('Read YAML File'){
             i = i+1
 //         parallel repobuild
         }  //while
-    
+    parallel repobuild
 }
  
- 
+ stage("Parallel Work Stage") {
+
+    // Prealocate dict/map of branchstages
+    def branchedStages = [:]
+
+    // Loop through all parallel branched stage names
+    for (STAGE_NAME in ["Branch_1", "Branch_2", "Branch_3"]) {
+
+        // Define and add to stages dict/map of parallel branch stages
+        branchedStages["${STAGE_NAME}"] = {
+            stage("Parallel Branch Stage: ${STAGE_NAME}") {
+                // Parallel stage work here
+                sh "sleep 10"
+            }
+        }
+
+    }
+
+    // Execute the stages in parallel
+    parallel branchedStages
+}
 }
