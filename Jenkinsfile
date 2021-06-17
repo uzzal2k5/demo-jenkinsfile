@@ -16,7 +16,7 @@ node {
  }
 
 stage('Read YAML File'){
-
+parallel {
     def data = readYaml file: "config.yaml"
     def repo = data.parameter.repository
     println "Repository"
@@ -28,15 +28,14 @@ stage('Read YAML File'){
       branch  = repo[i].branch
       url  = repo[i].url
       i = i+1
-//      "repo"+i +" = "+ name
-//      "branch"+i +" = "+ branch
-//      "url"+i +" = "+ url
-     print(  "repo"+i +" = "+ name +", "+"branch"+i +" = "+ branch+","+"url"+i +" = "+ url)
-     assert "repo"+i  ==  name
-//         "repo"+i +" = "+ name +", "+"branch"+i +" = "+ branch+","+"url"+i +" = "+ url
-     print repo0
-    } 
+     stage(println name) {
+                   
+       print(  "repo"+i +" = "+ name +", "+"branch"+i +" = "+ branch+","+"url"+i +" = "+ url)
+     }
   
+
+    }  //while
+}//parallel
 }
  
  
