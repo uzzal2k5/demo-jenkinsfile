@@ -16,12 +16,13 @@ node {
  }
 
 stage('Read YAML File'){
+ parallel {
         def data = readYaml file: "config.yaml"
         def repo = data.parameter.repository
         println "Repository"
         println repo
         println repo.size()
-        def repobuild = [:]
+//         def repobuild = [:]
         def i = 0
         while (i < repo.size()){
             name = repo[i].name
@@ -36,7 +37,7 @@ stage('Read YAML File'){
             i = i+1
 //         parallel repobuild
         }  //while
-    parallel repobuild
+}// parallel repobuild
 }
  
  stage("Parallel Work Stage") {
