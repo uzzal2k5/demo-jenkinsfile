@@ -21,7 +21,7 @@ stage('Read YAML File'){
         println "Repository"
         println repo
         println repo.size()
-    def repobuild = [:]
+        def repobuild = [:]
         def i = 0
         while (i < repo.size()){
             name = repo[i].name
@@ -35,8 +35,8 @@ stage('Read YAML File'){
             i = i+1
 
         }  //while
-    println repobuild
-//     parallel repobuild
+//     println repobuild
+    parallel repobuild
 }
  
  
