@@ -42,7 +42,7 @@ stage('Read YAML File'){
       url = repo[i].url
       i = i+1
 //      println "Build Repository Number :" i
-     print("Build with Repository: "+ name + " Branch: "+branch+" URL: "+ url)
+     print("Build Number [" + i + "] with Repository: "+ name + " Branch: "+branch+" URL: "+ url)
     } 
 
  
