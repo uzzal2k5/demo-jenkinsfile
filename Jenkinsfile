@@ -32,6 +32,7 @@ stage('Read YAML File'){
     println "val"+i
     while (i < repo.size()){
       name = repo[i].name
+      println "name"+i = name
       branch  = repo[i].branch
       url  = repo[i].url
       i = i+1
