@@ -15,7 +15,7 @@ node {
 
  }
 
-stage('Read YAML File'){
+stages('Read YAML File'){
 parallel {
     def data = readYaml file: "config.yaml"
     def repo = data.parameter.repository
@@ -27,12 +27,13 @@ parallel {
       name = repo[i].name
       branch  = repo[i].branch
       url  = repo[i].url
-      i = i+1
+      
       stage("Repo") {
                    
        print(  "repo"+i +" = "+ name +", "+"branch"+i +" = "+ branch+","+"url"+i +" = "+ url)
+       
      }
-  
+    i = i+1
 
     }  //while
 }//parallel
