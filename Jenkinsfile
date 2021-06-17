@@ -34,6 +34,7 @@ stage('Read YAML File'){
     def repo = data.parameter.repository.each{it.toString()}
     println "Repository"
     println repo
+    println repo.size()
 
  
 }
