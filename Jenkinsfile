@@ -26,6 +26,8 @@ stage('Read YAML File'){
     def data = readYaml file: "config.yaml"
     def repo = data.parameter.repository
     println "Repository"
+    println repo
+    println repo.size()
     def i = 0
     while (i < repo.size()){
       name = repo[i].name
