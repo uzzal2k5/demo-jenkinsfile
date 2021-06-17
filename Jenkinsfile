@@ -30,9 +30,9 @@ stage('Read YAML File'){
     println repo.size()
     def i = 0
     while (i < repo.size()){
-      name+i = repo[i].name
-      branch+i = repo[i].branch
-      url+i = repo[i].url
+      name + i = repo[i].name
+      branch + i = repo[i].branch
+      url + i = repo[i].url
       i = i+1
 //    print("Build Number [" + i + "] with Repository: "+ name[i] + " Branch: "+branch[i]+" URL: "+ url[i])
      
