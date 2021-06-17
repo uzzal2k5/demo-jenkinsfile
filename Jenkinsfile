@@ -58,7 +58,7 @@ stage('Read YAML File'){
     }
 
     // Execute the stages in parallel
-   println branchedStages
+   println branchedStages[0]
     parallel branchedStages
 }
 }
