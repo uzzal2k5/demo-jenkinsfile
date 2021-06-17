@@ -32,11 +32,11 @@ stage('Read YAML File'){
     println "val"+i
     while (i < repo.size()){
       name = repo[i].name
-      println "name"+i = name.toString()
       branch  = repo[i].branch
       url  = repo[i].url
       i = i+1
-    print("Build Number [" + i + "] with Repository: "+ name[i] + " Branch: "+branch[i]+" URL: "+ url[i])
+     buidcomm = "Build Number [" + i + "] with Repository: "+ name[i] + " Branch: "+branch[i]+" URL: "+ url[i]
+    print(buidcomm)
      
     } 
 }
