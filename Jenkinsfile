@@ -34,7 +34,7 @@ stage('Read YAML File'){
       branch[i] = repo[i].branch
       url[i] = repo[i].url
       i = i+1
-   print("Build Number [" + i + "] with Repository: "+ name[i] + " Branch: "+branch[i]+" URL: "+ url[i])
+//    print("Build Number [" + i + "] with Repository: "+ name[i] + " Branch: "+branch[i]+" URL: "+ url[i])
      
     } 
 }
