@@ -35,6 +35,14 @@ stage('Read YAML File'){
     println "Repository"
     println repo
     println repo.size()
+    def i = 0
+    while(i<repo.size()){
+      name = repo[i].name
+      branch = repo[i].branch
+      url = repo[i].url
+     println "Build Repository Number : " i+=1
+     print("Build with Repository: "+ name + " Branch: "+branch+" URL: "+ url)
+    } 
 
  
 }
