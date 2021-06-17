@@ -25,6 +25,8 @@ stage('Read YAML File'){
 
     def data = readYaml file: "config.yaml"
     println(data)
+   def String[] dataA = data.toList() 
+    println(dataA)
     println(data[0])
     println(data.parameter)
     println(data.parameter[0])
