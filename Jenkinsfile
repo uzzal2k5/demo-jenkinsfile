@@ -3,13 +3,7 @@
 import com.packages.*
 import groovy.json.JsonSlurper
 import groovy.json.JsonSlurperClassic
-//@Grab('org.yaml:snakeyaml:1.17')
-//import org.yaml.snakeyaml.Yaml
-//import org.yaml.snakeyaml.DumperOptions
-//import static org.yaml.snakeyaml.DumperOptions.FlowStyle.BLOCK
 
-//import com.packages.GlobalClass
-//import com.packages.MultiFunction
 def gclass = new GlobalClass()
 def gc = new MultiFunction()
 node { 
@@ -29,13 +23,12 @@ stage('Read YAML File'){
     println repo
     println repo.size()
     def i = 0
- while (i < repo.size()){
+    while (i < repo.size()){
       name = repo[i].name
       branch  = repo[i].branch
       url  = repo[i].url
       i = i+1
-     print("Build Number [" + i + "] with Repository: "+ name[i] + " Branch: "+branch[i]+" URL: "+ url[i])
-     
+     print("Build Number [" + i + "] with " + "repo"+i +" = "+ name + "branch"+i +" = "+ branch+" url"+i +" = "+ url)
     } 
 }
  
