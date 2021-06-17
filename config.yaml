@@ -4,15 +4,12 @@ parameter:
     - 
       name: Master_Repository
       branch: master
-      user_id: master_id
       url: Master_Repository_URL 
     - 
       name: Dev_Repository
       branch: dev
-      user_id: dev_id
       url: Dev_Repository_URL 
     - 
       name: Stage_Repository
       branch: Stage
-      user_id: stage_id
       url: Stage_Repository_URL 
