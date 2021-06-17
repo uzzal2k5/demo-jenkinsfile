@@ -16,27 +16,30 @@ node {
  }
 
 stages('Read YAML File'){
-parallel {
-    def data = readYaml file: "config.yaml"
-    def repo = data.parameter.repository
-    println "Repository"
-    println repo
-    println repo.size()
-    def i = 0
-    while (i < repo.size()){
-      name = repo[i].name
-      branch  = repo[i].branch
-      url  = repo[i].url
-      
-      stage("Repo") {
-                   
-       print(  "repo"+i +" = "+ name +", "+"branch"+i +" = "+ branch+","+"url"+i +" = "+ url)
-       
-     }
-    i = i+1
+        def data = readYaml file: "config.yaml"
+        def repo = data.parameter.repository
+        println "Repository"
+        println repo
+        println repo.size()
+    def repobuild = [:]
+        def i = 0
+        while (i < repo.size()){
+            name = repo[i].name
+            branch  = repo[i].branch
+            url  = repo[i].url
 
-    }  //while
-}//parallel
+            stage("Repo $i") {
+                repobuild["$i"] = {
+                    stage("Parallel Branch Stage: ${i}") {
+                        print("repo" + i + " = " + name + ", " + "branch" + i + " = " + branch + "," + "url" + i + " = " + url)
+                    }
+                }
+
+            }
+            i = i+1
+
+        }  //while
+    parallel repobuild
 }
  
  
