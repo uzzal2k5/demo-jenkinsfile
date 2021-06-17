@@ -25,13 +25,8 @@ stage('Read YAML File'){
 
     def data = readYaml file: "config.yaml"
     println(data)
-   def String[] dataA = data.toString() 
-    println(dataA)
-    println(data[0])
     println(data.parameter)
-    println(data.parameter[0])
-    println(data.parameter.parameter1_repo1)
-    println(data.parameter.parameter1_repo1[0])
+    println(data.parameter.repository)
     println(data.parameter.parameter1_repo1[0].name)
     println(data.parameter.parameter1_repo1[1].name)
     println(data.parameter.each{it.toString()})
