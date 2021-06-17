@@ -28,12 +28,12 @@ stage('Read YAML File'){
             name = repo[i].name
             branch  = repo[i].branch
             url  = repo[i].url
-            repobuild["$i"] = {
+//             repobuild["$i"] = {
               stage("${name+i}") {
                 print("repo" + i + " = " + name + ", " + "branch" + i + " = " + branch + "," + "url" + i + " = " + url)
                 sleep 10     
                }
-             }
+//              }
             i = i+1
 //         parallel repobuild
         }  //while
