@@ -15,7 +15,7 @@ node {
 
  }
 
-stages('Read YAML File'){
+stage('Read YAML File'){
         def data = readYaml file: "config.yaml"
         def repo = data.parameter.repository
         println "Repository"
