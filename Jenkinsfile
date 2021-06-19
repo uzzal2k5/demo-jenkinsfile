@@ -33,8 +33,9 @@ stage('Read YAML File'){
                 sleep 10     
                }
             }
-            i = i+1
+           
         parallel repobuild
+          i = i+1
         }  //while
 //  parallel repobuild
 }
