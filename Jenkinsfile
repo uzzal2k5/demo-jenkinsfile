@@ -36,8 +36,8 @@ stage('Read YAML File'){
                }
             }
     
-        }  //while
-  parallel repobuild
+        }  //For Loop (*While Loop)
+  println repobuild.each(it)
 }
  
 
