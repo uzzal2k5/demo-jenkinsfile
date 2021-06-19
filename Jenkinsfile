@@ -22,8 +22,10 @@ stage('Read YAML File'){
         println repo
         println repo.size()
         def repobuild = [:]
-        def i = 0
-        while (i < repo.size()){
+//         def i = 0
+ for (int i = 0; i < repo.size() ; i++){
+      
+//         while (i < repo.size()){
             name = repo[i].name
             branch  = repo[i].branch
             url  = repo[i].url
@@ -33,11 +35,9 @@ stage('Read YAML File'){
                 sleep 10     
                }
             }
-           
-        parallel repobuild
-          i = i+1
+    
         }  //while
-//  parallel repobuild
+  parallel repobuild
 }
  
 
