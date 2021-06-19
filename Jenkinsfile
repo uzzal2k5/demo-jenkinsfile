@@ -37,7 +37,7 @@ stage('Read YAML File'){
             }
     
         }  //For Loop (*While Loop)
-  println repobuild.each(it)
+  println repobuild
 }
  
 
