@@ -13,3 +13,7 @@ parameter:
       name: Stage_Repository
       branch: Stage
       url: Stage_Repository_URL 
+    - 
+      name: Test_Repository
+      branch: Test
+      url: Test_Repository_URL 
