@@ -29,7 +29,7 @@ stage('Read YAML File'){
             name = repo[i].name
             branch  = repo[i].branch
             url  = repo[i].url
-  def repobuildJob = repobuild.collectEntries(){
+  def repobuildJob[i] = repobuild.collectEntries(){
              [stage("${name+i}") {
                 print("repo" + i + " = " + name + ", " + "branch" + i + " = " + branch + "," + "url" + i + " = " + url)
                 sleep 10     
