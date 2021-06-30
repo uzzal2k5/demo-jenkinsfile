@@ -21,25 +21,26 @@ stage('Read YAML File'){
         println "Repository"
         println repo
         println repo.size()
-        def repobuild = [:]
+        def projectsBuilds = [:]
+        //def labelParameters
+        def repobuild
 //         def i = 0
         //repo.each{
  for (int i = 0; i < repo.size() ; i++){
-      
+           def currentProject = i
+           repobuild = []
 //         while (i < repo.size()){
             name = repo[i].name
             branch  = repo[i].branch
             url  = repo[i].url
-         repobuild["${name}"] = 
-         {stage("${name}") {
+         repobuild.add([stage("${name}") {
                 print("repo" + i + " = " + name + ", " + "branch" + i + " = " + branch + "," + "url" + i + " = " + url)
                 sleep 10     
-               }
-        
-            }
-    
+               }])
+         projectsBuilds[currentProject] = { repobuild }
+      
         }  //For Loop (*While Loop)
-  parallel repobuild
+  parallel projectsBuilds;
 }
  
 
