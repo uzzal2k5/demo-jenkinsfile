@@ -23,8 +23,8 @@ stage('Read YAML File'){
         println repo.size()
         def repobuild = [:]
 //         def i = 0
-        repo.each{
-//  for (int i = 0; i < repo.size() ; i++){
+        //repo.each{
+ for (int i = 0; i < repo.size() ; i++){
       
 //         while (i < repo.size()){
             name = repo[i].name
