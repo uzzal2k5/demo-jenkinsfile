@@ -23,22 +23,23 @@ stage('Read YAML File'){
         println repo.size()
         def repobuild = [:]
 //         def i = 0
- for (int i = 0; i < repo.size() ; i++){
+        repos.each{
+//  for (int i = 0; i < repo.size() ; i++){
       
 //         while (i < repo.size()){
             name = repo[i].name
             branch  = repo[i].branch
             url  = repo[i].url
-  def repobuildJob[name] = repobuild.collectEntries(){
-             [stage("${name}") {
+         repobuild["${name}"] = 
+         {stage("${name}") {
                 print("repo" + i + " = " + name + ", " + "branch" + i + " = " + branch + "," + "url" + i + " = " + url)
                 sleep 10     
-               }]
+               }
         
             }
     
         }  //For Loop (*While Loop)
-  parallel repobuildJob
+  parallel repobuild
 }
  
 
