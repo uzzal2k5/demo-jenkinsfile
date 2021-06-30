@@ -38,7 +38,7 @@ stage('Read YAML File'){
             }
     
         }  //For Loop (*While Loop)
-  println repobuildJob
+  parallel repobuildJob
 }
  
 
