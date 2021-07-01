@@ -17,3 +17,7 @@ parameter:
       name: Test_Repository
       branch: Test
       url: Test_Repository_URL 
+    - 
+      name: Demo_Repository
+      branch: De,p
+      url: Demo_Repository_URL 
